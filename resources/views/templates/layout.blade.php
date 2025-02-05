@@ -18,7 +18,7 @@
 
     <!-- Custom styles for this template-->
     <link href="{{asset('dist/css/sb-admin-2.min.css')}}" rel="stylesheet">
-     @yield('style')
+     @yield('css')
 </head>
 
 <body id="page-top">

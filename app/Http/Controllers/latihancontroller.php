@@ -24,7 +24,8 @@ class latihancontroller extends Controller
     {
         $biodata = new biodata();
         return view("biodata",[
-            'biodata' => $biodata->data_siswa()
+            'biodata' => $biodata->data_siswa(),
+            "menu" => "biodata"
         ]);
     }
 }
