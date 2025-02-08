@@ -1,20 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Belajar Laravel</title>
-</head>
-<body>
+@extends('templates.layout')
+@section('halaman_judul','halaman index')
+@section('css')
+
+    <style>
+            h1 {
+                color:blue;
+            }
+            .card-header{
+                color:blue;
+                background-color: greenyellow;
+            }
+            .card-body{
+                color:darkcyan;
+                background-color: whitesmoke;
+            }
+            h3{
+                color:purple;
+            }
+            </style>
+@endsection
+
+@section('kontent')
     <h1>Ini adalah halaman Home</h1>
-    <h3>
-        Selamat datang {{ $nama }},
-anda berada di kelas {{ $kelas }},anda tinggal di {{ $alamat }}
-    </h3>
-<h3> Tim  {{ $nama }} adalah </h3>
+    <div class="card-header">
+ Selamat datang {{ $nama }},anda berada di kelas {{ $kelas }},anda tinggal di {{ $alamat }}
+    </div>
+    <div class="card-body">
+
+ Tim  {{ $nama }} adalah 
 <ol>@foreach($gank as $gk)
     <li>{{ $gk }}</li>
-    @endforeach
-</ol>
-</body>
-</html>
+@endforeach
+</div>
+
+@endsection
+@section('script')
+<script>
+    alert('Ini halaman Home');
+    </script>
+@endsection

@@ -6,7 +6,7 @@ use Carbon\Carbon;
 use App\Models\biodata;
 use Illuminate\Http\Request;
 
-class latihancontroller extends Controller
+class Latihancontroller extends Controller
 {
     //
 
@@ -16,7 +16,8 @@ class latihancontroller extends Controller
         return view("latihan",
         [
             "judul"=>"Belajar Laravel 11",
-            "tanggal"=>$tanggal->isoFormat('dddd, D MMMM Y')
+            "tanggal"=>$tanggal->isoFormat('dddd, D MMMM Y'),
+            "menu"=>"latihan"
         ]);
     }
 
